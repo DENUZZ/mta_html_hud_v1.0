@@ -1,0 +1,130 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    user-select: none;
+    color: #eee;
+    font-size: 14px;
+    background: none;
+}
+
+img {
+    pointer-events: none;
+}
+
+.hud {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+}
+
+.hud .item-container {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hud .item-container .item-div {
+    height: 34px;
+    width: 34px;
+    background: #000000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hud .main .item-container.heart {
+    --bar-value: 90deg;
+    --bar-color: #1bad1b;
+    --bar-bg-color: #131313;
+    background: conic-gradient(var(--bar-color) var(--bar-value), var(--bar-bg-color) 0deg);
+}
+
+.hud .main .item-container.shield {
+    --bar-value: 180deg;
+    --bar-color: #214fc6;
+    --bar-bg-color: #131313;
+    background: conic-gradient(var(--bar-color) var(--bar-value), var(--bar-bg-color) 0deg);
+}
+
+.hud .main .item-container.food {
+    --bar-value: 180deg;
+    --bar-color: #ee6328;
+    --bar-bg-color: #131313;
+    background: conic-gradient(var(--bar-color) var(--bar-value), var(--bar-bg-color) 0deg);
+}
+
+.hud .main .item-container.water {
+    --bar-value: 180deg;
+    --bar-color: #1c95ff;
+    --bar-bg-color: #131313;
+    background: conic-gradient(var(--bar-color) var(--bar-value), var(--bar-bg-color) 0deg);
+}
+
+.hud .main .item-container.lung {
+    --bar-value: 180deg;
+    --bar-color: #DC143C;
+    --bar-bg-color: #131313;
+    background: conic-gradient(var(--bar-color) var(--bar-value), var(--bar-bg-color) 0deg);
+}
+
+.hud .main .item-container.mic {
+    --bar-value: 180deg;
+    --bar-color: #e6e930;
+    --bar-bg-color: #131313;
+    background: conic-gradient(var(--bar-color) var(--bar-value), var(--bar-bg-color) 0deg);
+}
+
+.hud .item img {
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.hud .main {
+    align-items: center;
+    border-radius: 10px;
+    min-width: 100%;
+}
+
+.hud .main .side-down .bars {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+
+/*
+
+
+██████╗ ███████╗███╗   ██╗██╗   ██╗███████╗███████╗
+██╔══██╗██╔════╝████╗  ██║██║   ██║╚══███╔╝╚══███╔╝
+██║  ██║█████╗  ██╔██╗ ██║██║   ██║  ███╔╝   ███╔╝ 
+██║  ██║██╔══╝  ██║╚██╗██║██║   ██║ ███╔╝   ███╔╝  
+██████╔╝███████╗██║ ╚████║╚██████╔╝███████╗███████╗
+╚═════╝ ╚══════╝╚═╝  ╚═══╝ ╚═════╝ ╚══════╝╚══════╝
+                                                   
+ ____________________________________________________
+|                                                   |
+| Try to create your own thing. Don't copy others|  |
+|___________________________________________________|
+
+All rights reserved by DENUZZ 2025 ©
+
+
+*/

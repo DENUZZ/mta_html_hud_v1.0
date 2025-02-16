@@ -1,0 +1,19 @@
+<meta>
+    <info name="Html Hud V1.0" author="DENUZZ" type="script" />
+    <script src="client.lua" type="client" />
+    <file src="index.html"/>
+    <file src="styles.css" />
+    <file src="images/heart.svg" />
+    <file src="images/shield.png" />
+    <file src="images/food.svg" />
+    <file src="images/water.svg" />
+    <file src="images/lung.svg" />
+    <file src="images/mic.png" />
+
+    <export function="toggleHud" type="client" />
+
+    <min_mta_version client="1.5.6-9.16404"></min_mta_version>
+</meta>
+
+
+<!-- Do not change anything without asking the developer. -->

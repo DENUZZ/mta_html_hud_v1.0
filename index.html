@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="hud">
+        <div class="main">
+            <div class="side-up"></div>
+            <div class="side-down">
+                <div class="bars">
+                    <div class="item-container heart" id="health-bar">
+                        <div class="item-div">
+                            <img src="images/heart.svg" alt="heart" loading="lazy"/>
+                        </div>
+                    </div>
+                    <div class="item-container shield" id="shield-bar">
+                        <div class="item-div">
+                            <img src="images/shield.png" alt="shield" width="18" height="23" loading="lazy"/>
+                        </div>
+                    </div>
+                    <div class="item-container food" id="food-bar">
+                        <div class="item-div">
+                            <img src="images/food.svg" alt="food" loading="lazy"/>
+                        </div>
+                    </div>
+                    <div class="item-container water" id="water-bar">
+                        <div class="item-div">
+                            <img src="images/water.svg" alt="water" loading="lazy"/>
+                        </div>
+                    </div>
+                    <div class="item-container lung" id="lung-bar">
+                        <div class="item-div">
+                            <img src="images/lung.svg" alt="lung" loading="lazy"/>
+                        </div>
+                    </div>
+                    <div class="item-container mic" id="mic-bar">
+                        <div class="item-div">
+                            <img src="images/mic.png" alt="mic" width="22" height="22" loading="lazy"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function updateHUD(data) {
+            const bars = {
+                'updateHealth': 'health-bar',
+                'updateShield': 'shield-bar',
+                'updateFood': 'food-bar',
+                'updateWater': 'water-bar',
+                'updateLung': 'lung-bar',
+                'updateMic': 'mic-bar'
+            };
+            
+            Object.keys(bars).forEach(type => {
+                if (data.type === type) {
+                    const bar = document.getElementById(bars[type]);
+                    if (bar) {
+                        const degree = (data[type.replace('update', '').toLowerCase()] / 100) * 360;
+                        bar.style.setProperty('--bar-value', `${degree}deg`);
+                    }
+                }
+            });
+        }
+        
+        window.addEventListener('message', event => updateHUD(event.data));
+    </script>
+</body>
+</html>
+
+
+<!-- 
+
+
+██████╗ ███████╗███╗   ██╗██╗   ██╗███████╗███████╗
+██╔══██╗██╔════╝████╗  ██║██║   ██║╚══███╔╝╚══███╔╝
+██║  ██║█████╗  ██╔██╗ ██║██║   ██║  ███╔╝   ███╔╝ 
+██║  ██║██╔══╝  ██║╚██╗██║██║   ██║ ███╔╝   ███╔╝  
+██████╔╝███████╗██║ ╚████║╚██████╔╝███████╗███████╗
+╚═════╝ ╚══════╝╚═╝  ╚═══╝ ╚═════╝ ╚══════╝╚══════╝
+                                                   
+ ____________________________________________________
+|                                                   |
+| Try to create your own thing. Don't copy others|  |
+|___________________________________________________|
+
+All rights reserved by DENUZZ 2025 ©
+
+-->
