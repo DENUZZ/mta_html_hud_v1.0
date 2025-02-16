@@ -26,7 +26,6 @@ A fully customizable and responsive HUD for Multi Theft Auto: San Andreas (MTA:S
    
 ## Customization
 - You can modify the HUD elements in the `index.html` and `style.css` files.
-- Use the `config.js` file to change colors, positions, and other settings.
 
 ## Contributions
 Contributions are welcome! If you find a bug or want to improve the HUD, feel free to submit a pull request.
