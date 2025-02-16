@@ -5,7 +5,7 @@ A fully customizable and responsive HUD for Multi Theft Auto: San Andreas (MTA:S
 ## Features
 - Clean and modern UI
 - Fully responsive design
-- Customizable HUD elements (health, armor, speed, fuel, etc.)
+- Customizable HUD elements (health, armor, hunger, thirst, etc.)
 - Optimized for performance
 - Easy to install and modify
 
